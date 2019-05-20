@@ -1,0 +1,7 @@
+﻿  agents.cpp
+  game.cpp
+  tema1POO.cpp
+  theMap.cpp
+  Generating Code...
+C:\Users\mgher\source\repos\tema1POO\tema1POO\game.cpp(239): warning C4715: 'game::fight': not all control paths return a value
+  tema1POO.vcxproj -> C:\Users\mgher\source\repos\tema1POO\x64\Debug\tema1POO.exe
