@@ -239,19 +239,20 @@ int game::fight(agent& x, agent& y)
 }
 
 void game::moveAgent(agent& x)
-{/*  E mult mai interesant cu miscarile random, am lasat si optiunea asta aici in caz ca vrei sa te distrezi
-	pair<int, int>v[8] = { make_pair(-1, -1),make_pair(-1, 0),make_pair(-1, 1),make_pair(0, -1),make_pair(0, 1),make_pair(1, -1),make_pair(1, 0),make_pair(1, 1) } ;
-	
-	int lin, col,ct;
-	
+{
+	pair<int, int>v[8] = { make_pair(-1, -1),make_pair(-1, 0),make_pair(-1, 1),make_pair(0, -1),make_pair(0, 1),make_pair(1, -1),make_pair(1, 0),make_pair(1, 1) };
+
+	int lin, col, ct;
+
 	do {
 		ct = rand() % 8;
 		lin = x.getLin() + v[ct].first;
 		col = x.getCol() + v[ct].second;
 
 	} while ((lin >= 0 && lin < battleGround.getHeight() && col >= 0 && col < battleGround.getWidth()) == 0);
-	*/
 
+	/*  for a deterministical aproach, the players move to the center of the map instead of randomly moving around it
+	the code above shall be erased and the code in this comment shall replace it
 	int lin, col;
 	lin = x.getLin();
 	col = x.getCol();
@@ -260,6 +261,7 @@ void game::moveAgent(agent& x)
 
 	if (col < battleGround.getWidth() / 2)++col;
 	else if (col > battleGround.getWidth() / 2)--col;
+	*/
 
 	if (lin == x.getLin() && col == x.getCol())return;//an agent that arrived at the map center can't fight with himself... that'd be dumb
 
